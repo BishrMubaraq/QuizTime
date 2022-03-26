@@ -1,0 +1,40 @@
+.image {
+  width: 100%;
+}
+.subText {
+  text-align: center;
+  font-size: 23px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+.categories {
+  color: white;
+  padding: 2rem;
+  width: 40%;
+  background-color: #51499e;
+  margin-bottom: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: wrap;
+}
+.categories:hover {
+  background-color: #52499ecb;
+}
+.cardHeading {
+  font-size: 1.9rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+@media screen and (max-width: 654px) {
+  .categories {
+    width: 70%;
+  }
+}
