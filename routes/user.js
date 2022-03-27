@@ -6,8 +6,9 @@ const userHelpers = require('../helpers/user-helpers');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  let userData = req.session.user
   categoryHelpers.getAllCategories().then((categories)=>{
-    res.render('user/home',{user:true,categories});
+    res.render('user/home',{user:true,categories,userData});
   })
 });
 
@@ -48,4 +49,10 @@ router.post('/signup',(req,res)=>{
     res.redirect('/')
   })
 })
+
+// LogOut
+router.get('/logout',(req,res)=>{
+  req.session.destroy()
+  res.redirect('/')
+});
 module.exports = router;

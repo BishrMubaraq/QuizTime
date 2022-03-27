@@ -23,7 +23,14 @@
       <div class="nav-items">
         <a href="/">Home</a>
         <a href="#news">Profile</a>
-        <a href="/login">LogIn</a>
+        {{#if userData}}
+          <a
+            onclick="return confirm('Are you Sure to LogOut')"
+            href="/logout"
+          >LogOut</a>
+        {{else}}
+          <a href="/login">LogIn</a>
+        {{/if}}
       </div>
     </div>
   </nav>
