@@ -1,2 +1,37 @@
+.theme {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
 .addCategory {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+.addCatBtn {
+  background-color: #51499e;
+  color: white;
+  border: none;
+  padding: 0.7rem;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.addCatBtn:hover {
+  background-color: #3c3679;
+}
+.categoryText {
+  justify-content: start;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+.categoryList {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  background-color: #52499e7c;
+  cursor: pointer;
+  padding: 25px;
+}
+.categorylist:hover {
+  background-color: #52499e;
+  color: white;
 }

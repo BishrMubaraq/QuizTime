@@ -1,5 +1,19 @@
-<section>
+<section class="theme">
   <div class="addCategory">
-
+    <a href="admin/add-category">
+    <button class="addCatBtn">
+      Add Category
+    </button>
+    </a>
+  </div>
+  <div class="categoriesAdmin">
+    <h2 class="categoryText">Categories</h2>
+    {{#each categories}}
+    <div class="categoryList">
+      <h3>{{this.CategoryName}}</h3>
+      
+    </div>
+    {{/each}}
+    </div>
   </div>
 </section>

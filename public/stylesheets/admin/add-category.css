@@ -1,0 +1,32 @@
+.container {
+  margin: 25px;
+}
+.Title {
+  font-size: 1.5rem;
+}
+.content-box {
+  padding: 1.5rem;
+  background-color: #52499e5d;
+  border-radius: 10px;
+}
+.input-area {
+  width: 60vw;
+  border: solid 1px;
+  border-color: #52499e;
+  border-radius: 5px;
+  margin-top: 0.3rem;
+  padding: 0.4rem;
+}
+.Btn {
+  background-color: #51499e;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #3c3679;
+}
