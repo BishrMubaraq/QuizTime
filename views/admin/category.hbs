@@ -3,28 +3,31 @@
     <h1>{{category.CategoryName}}</h1>
   </div>
   <div class="addCategory">
-    <a href="add-question">
+    <a href="add-question?id={{category._id}}">
       <button class="addCatBtn">
         Add Question
       </button>
     </a>
   </div>
-  <div class="questionList">
-    <div class="questn">
-      <h1>1.What is this?</h1>
-      <h3>A. What</h3>
-      <h3>B. which</h3>
-      <h3>C. When</h3>
-      <h3>D. Who</h3>
-      <h4><span>Correct Answer:</span>B</h4>
-      <p><span>Description:</span>
-        publishing and graphic design, Lorem ipsum is a placeholder text
-        commonly used to demonstrate the visual form of a document or a typeface
-        without relying on meaningful content. Lorem ipsum may be used as a
-        placeholder before the final copy is
-      </p>
-      <a class="editBtn" href="edit-question">Edit</a>
-      <a class="DeleteBtn" href="">Delete</a>
+  {{#each questionBank}}
+    <div class="questionList">
+      <div class="questn">
+        <h1>{{this.Question}}</h1>
+        <h3>A.{{this.A}}</h3>
+        <h3>B.{{this.B}}</h3>
+        <h3>C.{{this.C}}</h3>
+        <h3>D.{{this.D}}</h3>
+        <h4><span>Correct Answer:</span>{{this.CorrectAnswer}}</h4>
+        <p><span>Description:</span>
+          {{this.Description}}
+        </p>
+        <a class="editBtn" href="edit-question?id={{this._id}}">Edit</a>
+        <a
+          class="DeleteBtn"
+          href="delete-question?quesId={{this._id}}&catId={{this.catId}}"
+          onclick="return confirm('Are you sure to delete?')"
+        >Delete</a>
+      </div>
     </div>
-  </div>
+  {{/each}}
 </section>

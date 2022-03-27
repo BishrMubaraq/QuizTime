@@ -3,7 +3,7 @@
     <h2>Add Question</h2>
   </div>
   <div class="form">
-    <form action="">
+    <form action="" method="post">
       <label class="label" for="">Question</label><br />
       <textarea
         name="Question"
@@ -13,6 +13,13 @@
         rows="10"
       ></textarea><br />
       <label class="label" for="">Options</label><br />
+      <input
+        class="options"
+        name="catId"
+        type="text"
+        value="{{catId}}"
+        hidden
+      /><br />
       <input class="options" name="A" type="text" /><br />
       <input class="options" name="B" type="text" /><br />
       <input class="options" name="C" type="text" /><br />

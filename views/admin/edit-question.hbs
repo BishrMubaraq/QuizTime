@@ -3,7 +3,7 @@
     <h2>Edit Question</h2>
   </div>
   <div class="form">
-    <form action="">
+    <form action="" method="post">
       <label class="label" for="">Question</label><br />
       <textarea
         name="Question"
@@ -11,14 +11,26 @@
         id=""
         cols="30"
         rows="10"
-      ></textarea><br />
+      >{{data.Question}}</textarea><br />
       <label class="label" for="">Options</label><br />
-      <input class="options" name="A" type="text" /><br />
-      <input class="options" name="B" type="text" /><br />
-      <input class="options" name="C" type="text" /><br />
-      <input class="options" name="D" type="text" /><br />
+      <input
+        class="options"
+        name="id"
+        type="text"
+        value="{{data._id}}"
+        hidden
+      /><br />
+      <input class="options" name="A" type="text" value="{{data.A}}" /><br />
+      <input class="options" name="B" type="text" value="{{data.B}}" /><br />
+      <input class="options" name="C" type="text" value="{{data.C}}" /><br />
+      <input class="options" name="D" type="text" value="{{data.D}}" /><br />
       <label class="label" for="">Correct Answer</label><br />
-      <input class="correctAnswer" name="CorrectAnswer" type="text" /><br />
+      <input
+        class="correctAnswer"
+        name="CorrectAnswer"
+        type="text"
+        value="{{data.CorrectAnswer}}"
+      /><br />
       <label class="label" for="">Description</label><br />
       <textarea
         name="Description"
@@ -26,7 +38,7 @@
         id=""
         cols="30"
         rows="10"
-      ></textarea><br />
+      >{{data.Description}}</textarea><br />
       <input type="submit" value="Update" />
     </form>
   </div>
