@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 });
 
 
-// Add or Edit Category
+// Add Category
 
 router.get('/add-category',(req,res)=>{
   res.render('admin/add-category',{admin:true})
@@ -26,6 +26,27 @@ router.post('/add-category',(req,res)=>{
   })
 });
 
+// Edit Category
+router.get('/edit-category',(req,res)=>{
+  categoryHelpers.getCategoryDetails(req.query.id).then((category)=>{
+    res.render('admin/edit-category',{admin:true,category})
+  })
+
+})
+router.post('/edit-category',(req,res)=>{
+  let catId =req.query.id
+  categoryHelpers.updateCategory(catId,req.body).then(()=>{
+    res.redirect('/admin')
+  })
+    
+  })
+// Delete Category
+router.get('/delete-category',(req,res)=>{
+  categoryHelpers.deleteCategoy(req.query.id).then(()=>{
+    res.redirect('/admin')
+  })
+})
+
 // View Users
 
 router.get('/view-users',(req,res)=>{
@@ -34,6 +55,21 @@ router.get('/view-users',(req,res)=>{
   })
 })
 
+// Category
+router.get('/category',(req,res)=>{
+  categoryHelpers.getCategoryDetails(req.query.id).then((category)=>{
+    res.render('admin/category',{admin:true,category})
+  })
+})
 
+// Add Question
+router.get('/add-question',(req,res)=>{
+  res.render('admin/add-question',{admin:true})
+})
+
+// Edit Question
+router.get('/edit-question',(req,res)=>{
+  res.render('admin/edit-question',{admin:true})
+})
 
 module.exports = router;

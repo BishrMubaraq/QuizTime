@@ -25,7 +25,7 @@ router.get('/login',(req,res)=>{
   if(req.session.loggedIn){
     res.redirect('/')
   }else{
-    res.render('user/login',{login:true,"LoginErr":req.session.loginErr})
+    res.render('user/login',{user:true,"LoginErr":req.session.loginErr})
     req.session.loginErr=false
   }
 });
@@ -73,6 +73,13 @@ router.post('/edit-profile',(req,res)=>{
     req.session.user=response
     res.redirect('/profile')
   })
+})
+
+// QuizBox
+
+router.get('/quizbox',verifyLogin,(req,res)=>{
+  let userData=req.session.user
+  res.render('user/quizbox',{user:true,userData})
 })
 
 

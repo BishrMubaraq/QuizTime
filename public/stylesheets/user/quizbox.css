@@ -1,0 +1,73 @@
+.quiz-box {
+  background-color: #f9fffc;
+  box-sizing: content-box;
+  padding: 1.3rem;
+  border: solid 1px;
+  border-radius: 10px;
+  border-color: #238647;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.question {
+  color: #f7505e;
+  font-size: 1.5rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.options {
+  font-family: "Poppins", sans-serif;
+  background-color: white;
+  border: 1px solid #238647;
+  padding: 0.3rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.options.true {
+  background-color: #91cca6;
+}
+.options.false {
+  background-color: #dd5e69;
+  color: white;
+  border-color: red;
+}
+.options:hover {
+  background-color: #ccecd859;
+  color: #238647(92, 92, 92);
+  border-color: #b0e4c3(243, 209, 117);
+  box-shadow: 2px 2px #8cebaf(212, 232, 238);
+}
+.categoryOption {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f8bec2;
+  margin-top: 2rem;
+  border-radius: 10px;
+  width: 100%;
+}
+.CategoryName {
+  text-align: center;
+  padding: 3rem;
+  font-family: "Poppins", sans-serif;
+}
+.categoryoption:hover {
+  cursor: pointer;
+  background-color: #eb99a0;
+}
+.quiz-box-title {
+  font-family: "Poppins", sans-serif;
+  padding-top: 2rem;
+}
+.description {
+  background-color: #fffed1;
+  margin-top: 1.2rem;
+  border-radius: 1rem;
+}
+.descriptionText {
+  color: #111004;
+  font-family: "Poppins", sans-serif;
+  padding: 1rem;
+  font-weight: 400;
+}

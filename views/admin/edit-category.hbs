@@ -1,0 +1,15 @@
+<section class="theme">
+  <div class="container">
+    <h4 class="Title">Edit Category</h4>
+    <div class="content-box">
+      <form action"/admin/add-category" method="post">
+        <label class="label" for="">Category Name</label>
+        <br />
+        <input class="input-area" type="text" name="CategoryName" value="{{category.CategoryName}}" />
+        <input type="text" name="id" value="{{category._id}}" hidden>
+        <br />
+        <button type="submit" class="btn">Update</button>
+      </form>
+    </div>
+  </div>
+</section>

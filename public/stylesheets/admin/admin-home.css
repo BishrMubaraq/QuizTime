@@ -19,6 +19,10 @@
 .addCatBtn:hover {
   background-color: #3c3679;
 }
+.catBtn {
+  text-decoration: none;
+  color: #3c3679;
+}
 .categoryText {
   justify-content: start;
   margin-top: 25px;
