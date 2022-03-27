@@ -1,0 +1,21 @@
+<section class="login-section">
+  <h3 class="login-heading">Login</h3>
+  <div class="container d-flex justify-content-center pt-3">
+    <form class="formClass" action="/login" method="post">
+      <label class="labels">Email</label>
+      <br />
+      <input type="email" name="Email" />
+      <br />
+      <label class="labels" for="">Password</label>
+      <br />
+      <input  type="password" name="Password"></inputclass="labels">
+      <br />
+      {{#if LoginErr}}
+      <p class="error mt-1">Invalid Mobile Number Or Password</p>
+      {{/if}}
+      <a class="link" href="signup">Create new Account</a>
+      <br />
+      <input class="login-button" type="submit" value="Login" />
+    </form>
+  </div>
+</section>

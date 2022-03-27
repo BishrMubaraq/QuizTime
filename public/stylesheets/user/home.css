@@ -18,17 +18,14 @@
   padding: 2rem;
   width: 40%;
   background-color: #51499e;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
   cursor: pointer;
-  display: flex;
-  justify-content: flex-start;
-  flex-flow: wrap;
 }
 .categories:hover {
   background-color: #52499ecb;
 }
 .cardHeading {
-  font-size: 1.9rem;
+  font-size: 1.2rem;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   text-align: center;
