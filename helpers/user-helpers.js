@@ -34,5 +34,18 @@ module.exports={
                 resolve({status:false})
             }
         })
+    },editProfile:(userId,userDet)=>{
+        return new Promise ((resolve,reject)=>{
+            db.get().collection(collections.USER_COLLECTION).updateOne({_id:objectId(userId)},{
+                $set:{
+                    Name:userDet.Name
+                }
+            }).then((response)=>{
+                db.get().collection(collections.USER_COLLECTION).findOne({_id:objectId(userId)}).then((user)=>{
+                    resolve(user)
+                })
+                
+            })
+        })
     },
 }

@@ -2,6 +2,13 @@ var express = require('express');
 var router = express.Router();
 const categoryHelpers = require('../helpers/category-helpers');
 const userHelpers = require('../helpers/user-helpers');
+const verifyLogin=(req,res,next)=>{
+  if(req.session.loggedIn){
+    next()
+  }else{
+    res.redirect('/login')
+  }
+}
 
 
 /* GET home page. */
@@ -49,6 +56,26 @@ router.post('/signup',(req,res)=>{
     res.redirect('/')
   })
 })
+
+// Profile
+router.get('/profile',verifyLogin,(req,res)=>{
+  let userData=req.session.user
+  res.render('user/profile',{user:true,userData})
+})
+
+// Edit Profile
+router.get('/edit-profile',verifyLogin,(req,res)=>{
+  let userData=req.session.user
+  res.render('user/edit-profile',{user:true,userData})
+})
+router.post('/edit-profile',(req,res)=>{
+  userHelpers.editProfile(req.query.id,req.body).then((response)=>{
+    req.session.user=response
+    res.redirect('/profile')
+  })
+})
+
+
 
 // LogOut
 router.get('/logout',(req,res)=>{
