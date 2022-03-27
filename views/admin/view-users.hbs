@@ -1,0 +1,17 @@
+<section class="theme">
+  <div class="Table">
+    <h2>QuizTime Users</h2>
+    <table id="customers">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      {{#each usersData}}
+        <tr>
+          <td>{{this.Name}}</td>
+          <td>{{this.Email}}</td>
+        </tr>
+      {{/each}}
+    </table>
+  </div>
+</section>

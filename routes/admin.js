@@ -1,6 +1,8 @@
 var express = require('express');
+const { render } = require('express/lib/response');
 var router = express.Router();
 var categoryHelpers=require('../helpers/category-helpers')
+const userHelpers = require('../helpers/user-helpers');
 
 
 /* Admin Panel */
@@ -24,6 +26,13 @@ router.post('/add-category',(req,res)=>{
   })
 });
 
+// View Users
+
+router.get('/view-users',(req,res)=>{
+  userHelpers.getAllUsers().then((usersData)=>{
+    res.render('admin/view-users',{admin:true,usersData})
+  })
+})
 
 
 

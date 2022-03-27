@@ -48,4 +48,10 @@ module.exports={
             })
         })
     },
+    getAllUsers:()=>{
+        return new Promise(async(resolve,reject)=>{
+         let users=await db.get().collection(collections.USER_COLLECTION).find().toArray()
+         resolve(users)
+        })
+    },
 }
