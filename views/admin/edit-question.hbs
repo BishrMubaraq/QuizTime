@@ -1,4 +1,4 @@
-<section class="theme">
+<section class="theme container">
   <div class="headText">
     <h2>Edit Question</h2>
   </div>
@@ -20,10 +20,34 @@
         value="{{data._id}}"
         hidden
       /><br />
-      <input class="options" name="A" type="text" value="{{data.A}}" /><br />
-      <input class="options" name="B" type="text" value="{{data.B}}" /><br />
-      <input class="options" name="C" type="text" value="{{data.C}}" /><br />
-      <input class="options" name="D" type="text" value="{{data.D}}" /><br />
+      <input
+        class="optionsQ"
+        name="A"
+        type="text"
+        value="{{data.A}}"
+        placeholder="A"
+      /><br />
+      <input
+        class="optionsQ"
+        name="B"
+        type="text"
+        value="{{data.B}}"
+        placeholder="B"
+      /><br />
+      <input
+        class="optionsQ"
+        name="C"
+        type="text"
+        value="{{data.C}}"
+        placeholder="C"
+      /><br />
+      <input
+        class="optionsQ"
+        name="D"
+        type="text"
+        value="{{data.D}}"
+        placeholder="D"
+      /><br />
       <label class="label" for="">Correct Answer</label><br />
       <input
         class="correctAnswer"
@@ -39,7 +63,7 @@
         cols="30"
         rows="10"
       >{{data.Description}}</textarea><br />
-      <input type="submit" value="Update" />
+      <input class="Btn" type="submit" value="Update" />
     </form>
   </div>
 </section>

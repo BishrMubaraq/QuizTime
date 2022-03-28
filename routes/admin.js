@@ -60,8 +60,13 @@ router.get('/view-users',(req,res)=>{
 router.get('/category',async(req,res)=>{
     let category=await categoryHelpers.getCategoryDetails(req.query.id)
     let qb=category.questionBank
-    let questionBank=await categoryHelpers.getQuestionBankQuestions(req.query.id)
-    res.render('admin/category',{admin:true,category,questionBank})
+    if(qb){
+      let questionBank=await categoryHelpers.getQuestionBankQuestions(req.query.id)
+      res.render('admin/category',{admin:true,category,questionBank})
+    }else{
+      res.render('admin/category',{admin:true,category})
+    }
+    
     
   
 })

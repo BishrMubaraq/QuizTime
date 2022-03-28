@@ -54,4 +54,11 @@ module.exports={
          resolve(users)
         })
     },
+    deleteUser:(userId)=>{
+        return new Promise((resolve,reject)=>{
+            db.get().collection(collections.USER_COLLECTION).deleteOne({_id:objectId(userId)}).then(()=>{
+                resolve()
+            })
+        })
+    }
 }

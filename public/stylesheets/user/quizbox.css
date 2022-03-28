@@ -1,16 +1,16 @@
 .quiz-box {
   background-color: #f9fffc;
   box-sizing: content-box;
-  padding: 1.3rem;
+  padding: 1rem;
   border: solid 1px;
   border-radius: 10px;
-  border-color: #238647;
+  border-color: #3c3679;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 .question {
-  color: #f7505e;
-  font-size: 1.5rem;
+  color: #0b0a16;
+  font-size: 1.3rem;
   font-family: "Poppins", sans-serif;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -18,7 +18,7 @@
 .options {
   font-family: "Poppins", sans-serif;
   background-color: white;
-  border: 1px solid #238647;
+  border: 1px solid #3c3679;
   padding: 0.3rem;
   border-radius: 5px;
   margin-bottom: 0.5rem;

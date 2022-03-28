@@ -77,11 +77,23 @@ router.post('/edit-profile',(req,res)=>{
 
 // QuizBox
 
-router.get('/quizbox',verifyLogin,(req,res)=>{
+router.get('/quizbox',verifyLogin,async(req,res)=>{
   let userData=req.session.user
-  res.render('user/quizbox',{user:true,userData})
+  let category=await categoryHelpers.getCategoryDetails(req.query.id)
+  let qb=category.questionBank
+  if(qb){
+    let questionBank=await categoryHelpers.getQuestionBankQuestions(req.query.id)
+    res.render('user/quizbox',{user:true,category,questionBank,userData})
+  }else{
+    res.redirect('/')
+  }
 })
-
+// Delete Account
+router.get('/delete-account',(req,res)=>{
+  userHelpers.deleteUser(req.query.id).then(()=>{
+    res.redirect('/')
+  })
+})
 
 
 // LogOut

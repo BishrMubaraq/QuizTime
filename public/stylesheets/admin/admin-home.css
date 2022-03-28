@@ -39,3 +39,7 @@
   background-color: #52499e;
   color: white;
 }
+.catIcon {
+  float: right;
+  display: block;
+}

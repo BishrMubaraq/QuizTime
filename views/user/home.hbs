@@ -7,11 +7,12 @@
   </div>
   {{#each categories}}
     <div class="row">
-      <a href="quizbox?id={{this._id}}">
-        <div class="categories">
-          <h1 class="cardHeading">{{this.CategoryName}}</h1>
-        </div>
-      </a>
+      <div
+        onclick="location.href ='quizbox?id={{this._id}}'"
+        class="categories"
+      >
+        <h1 class="cardHeading">{{this.CategoryName}}</h1>
+      </div>
     </div>
   {{/each}}
 </section>

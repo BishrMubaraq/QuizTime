@@ -26,7 +26,36 @@
   font-size: 1rem;
   margin-top: 1rem;
   cursor: pointer;
+  text-decoration: none;
 }
 .btn:hover {
   background-color: #3c3679;
+}
+.error {
+  color: red;
+}
+.link {
+  text-decoration: none;
+}
+.label {
+  font-size: 1rem;
+}
+.textarea {
+  width: 70%;
+  height: 14%;
+  border: 1px solid #3c3679;
+  border-radius: 5px;
+}
+.optionsQ {
+  width: 40%;
+  height: 6%;
+  border: 1px solid #3c3679;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.correctAnswer {
+  width: 30%;
+  height: 6%;
+  border: 1px solid #3c3679;
+  border-radius: 5px;
 }

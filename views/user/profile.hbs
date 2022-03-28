@@ -1,15 +1,22 @@
 <section class="theme">
-  <div class="headText">
-    <h1>My Profile</h1>
-  </div>
-  <div class="profile-body">
-    {{#if userData}}
-      <h3>Name : {{userData.Name}}</h3>
-      <h3>Email : {{userData.Email}}</h3>
-      <a href="/edit-profile?id={{userData._id}}">
-        <button>Edit Profile</button>
-      </a>
-      <button>Delete Account</button>
-    {{/if}}
+  <div class="container">
+    <div class="headText">
+      <h1>My Profile</h1>
+    </div>
+    <div class="content-box">
+      {{#if userData}}
+        <h3>Name : {{userData.Name}}</h3>
+        <h3>Email : {{userData.Email}}</h3>
+        <a href="/edit-profile?id={{userData._id}}">
+          <button class="Btn">Edit Profile</button>
+        </a>
+        <a
+          href="/delete-account?id={{userData._id}}"
+          onclick="return confirm('Are you sure to Delete Account?')"
+        >
+          <button class="Btn">Delete Account</button>
+        </a>
+      {{/if}}
+    </div>
   </div>
 </section>

@@ -1,29 +1,30 @@
 {{! Quiz Box }}
 <section>
   <div class="container">
-    <h3 class="quiz-box-title">Title</h3>
-    <div class="quiz-box">
+    <h3 class="Title">{{category.CategoryName}}</h3>
+    <div class="content-box">
+      {{#each questionBank}}
       <div class="quiz_question">
-        <span><h5 class="question">What is this</h5></span>
+        <span><h5 class="question">{{this.Question}}</h5></span>
         <div class="option-list">
           <div class="options" onclick="optionSelected(this)">
-            <span>A. car</span>
+            <span>A. {{this.A}}</span>
           </div>
           <div class="options" onclick="optionSelected(this)">
-            <span>B.{{this.B}}</span>
+            <span>B. {{this.B}}</span>
           </div>
           <div class="options" onclick="optionSelected(this)">
-            <span>C.{{this.C}}</span>
+            <span>C. {{this.C}}</span>
           </div>
           <div class="options" onclick="optionSelected(this)">
-            <span>D.{{this.D}}</span>
+            <span>D. {{this.D}}</span>
           </div>
         </div>
       </div>
     </div>
     <div>
-      <button type="button" class="btn btn-primary btn-sm">Back</button>
-      <button type="button" class="btn btn-Success btn-sm">Next</button>
+      <button type="button" class="btn">Back</button>
+      <button type="button" class="btn">Next</button>
     </div>
   </div>
 </section>
@@ -38,3 +39,4 @@
     </div>
   </div>
 </article>
+{{/each}}
